@@ -5,12 +5,12 @@ package paquete1;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author reroes
  */
-public class Ejercicio00 {
+public class Ejercicio000 {
+
     public static void main(String[] args) {
         // Declarar y generar arreglos en Java
 
@@ -20,8 +20,9 @@ public class Ejercicio00 {
         String[] estudiantes = {"Luis", "Ana", "Mónica", "José", "Juan"};
         double[] promediosFinales = new double[5];
 
-        double sumaNotas;
-        double promedio;
+        double sumaNotas;// = promediosMateria1[2] + promediosMateria2[2];
+        double promedio;// = sumaNotas / 2;
+        // promediosFinales[2] = promedio;
 
         String mensajeFinal = ""; // variable que acumula un reporte final
         // Se hace uso del ciclo repetitivo for para recorrer los arreglos
@@ -39,15 +40,17 @@ public class Ejercicio00 {
 
         for (int i = 0; i < promediosMateria1.length; i++) {
 
-            mensajeFinal = String.format("%sEstudiante:%s - promedio final: "
-                    + "%.4f\n",
+            mensajeFinal = String.format("%sEstudiante:%s, materia 1: %.2f, "
+                    + "materia 2: %.2f. Promedio final: %.4f\n",
                     mensajeFinal,
                     estudiantes[i],
+                    promediosMateria1[i],
+                    promediosMateria2[i],
                     promediosFinales[i]);
         }
 
         System.out.printf("%s\n", mensajeFinal);
 
     }
-    
+
 }
