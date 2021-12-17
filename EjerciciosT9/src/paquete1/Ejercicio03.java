@@ -20,25 +20,21 @@ public class Ejercicio03 {
         int elementosArribaMedia = 0; // 8
         int elementosAbajoMedia = 0; // 5
         double suma = 0;
-        int indice = 0;
         double media;
 
         for (int i = 0; i < arreglo.length; i++) {
-            suma = suma + arreglo[indice];
-            indice = indice + 1;
+            suma = suma + arreglo[i];
         }
         media = suma / arreglo.length;
-        indice = 0;
 
         for (int i = 0; i < arreglo.length; i++) {
 
-            if (arreglo[indice] > media) {
+            if (arreglo[i] > media) {
                 elementosArribaMedia = elementosArribaMedia + 1;
 
             } else {
                 elementosAbajoMedia = elementosAbajoMedia + 1;
             }
-            indice = indice + 1;
         }
 
         System.out.printf("Los elementos arriba de la media son: %s\nLos"
